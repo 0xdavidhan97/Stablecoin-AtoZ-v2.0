@@ -43,7 +43,7 @@ export default function Sidebar() {
         {/* Profile image */}
         <div className="absolute top-[66px] left-[25px] w-[190px] h-[217px] rounded-[10px] overflow-hidden">
           <Image
-            src="/profile.png"
+            src="/profile2.png"
             alt="프로필"
             fill
             className="object-cover"
