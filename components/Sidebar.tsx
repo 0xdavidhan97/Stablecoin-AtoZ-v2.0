@@ -61,7 +61,7 @@ export default function Sidebar() {
         </p>
 
         {/* Designed in */}
-        <div className="absolute top-[366px] left-0 right-0 flex items-center justify-center gap-2">
+        <div className="absolute top-[366px] left-[25px] flex items-center gap-2">
           <span className="text-[12px] text-[#575757]">🎨 Designed in</span>
           <Image
             src="/figma_logo.png"
@@ -73,7 +73,7 @@ export default function Sidebar() {
         </div>
 
         {/* Built with */}
-        <div className="absolute top-[405px] left-0 right-0 flex items-center justify-center gap-2">
+        <div className="absolute top-[405px] left-[25px] flex items-center gap-2">
           <span className="text-[12px] text-[#575757]">⚡ Built with</span>
           <Image
             src="/claude_logo.png"
