@@ -4,10 +4,10 @@ interface ChartCardProps {
 
 export default function ChartCard({ title }: ChartCardProps) {
   return (
-    <div className="border-2 border-[#C8C8C8] rounded-[10px] p-6 min-h-[320px] flex flex-col">
-      <h3 className="text-[24px] md:text-[30px] font-medium text-black">{title}</h3>
-      <div className="flex-1 flex items-center justify-center mt-4">
-        <p className="text-gray-400 text-sm">Chart coming soon</p>
+    <div className="border-2 border-[#C8C8C8] rounded-[6px] p-4 min-h-[160px] flex flex-col">
+      <h3 className="text-[16px] font-medium text-black">{title}</h3>
+      <div className="flex-1 flex items-center justify-center mt-3">
+        <p className="text-gray-400 text-[11px]">Chart coming soon</p>
       </div>
     </div>
   )
