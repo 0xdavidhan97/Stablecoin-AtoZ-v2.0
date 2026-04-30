@@ -52,12 +52,13 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside
         className={[
-          'fixed left-0 top-0 w-[200px] h-screen bg-[#FAFAFA] overflow-hidden flex flex-col z-40',
+          'fixed left-0 top-0 w-[200px] h-screen bg-[#FAFAFA] overflow-hidden z-40',
           'transition-transform duration-300 ease-in-out',
           isOpen ? 'translate-x-0' : '-translate-x-full xl:translate-x-0',
         ].join(' ')}
       >
-        <div className="px-[12px] pt-[27px] flex flex-col h-full">
+        {/* Scrollable content area — leaves room for the fixed button */}
+        <div className="px-[12px] pt-[27px] pb-[64px] flex flex-col gap-3 h-full overflow-hidden">
           {/* Top info */}
           <div className="shrink-0">
             <h1 className="text-[20px] font-medium text-black leading-tight">쟁쟁이</h1>
@@ -73,7 +74,7 @@ export default function Sidebar() {
           </div>
 
           {/* Sections */}
-          <div className="flex flex-col gap-2 mt-3 flex-1 min-h-0">
+          <div className="flex flex-col gap-2 flex-1 min-h-0">
             {/* How I Built */}
             <div className="border-2 border-dashed border-[#C8C8C8] rounded-[6px] px-2 py-2">
               <p className="text-[12px] text-[#575757] mb-1.5">How I Built</p>
@@ -100,16 +101,16 @@ export default function Sidebar() {
               <p className="text-[13px] text-[#575757] leading-snug">#x402 #Claude_Code</p>
             </div>
           </div>
+        </div>
 
-          {/* Copy Link */}
-          <div className="py-4 shrink-0">
-            <button
-              onClick={copyLink}
-              className="w-full bg-[#DCDCDC] rounded-[10px] py-1.5 text-[11px] font-medium text-gray-700 hover:bg-[#c8c8c8] active:bg-[#b8b8b8] transition-colors cursor-pointer"
-            >
-              Copy Link
-            </button>
-          </div>
+        {/* Copy Link — fixed to sidebar bottom */}
+        <div className="absolute bottom-[24px] left-[12px] right-[12px]">
+          <button
+            onClick={copyLink}
+            className="w-full bg-[#DCDCDC] rounded-[10px] py-1.5 text-[11px] font-medium text-gray-700 hover:bg-[#c8c8c8] active:bg-[#b8b8b8] transition-colors cursor-pointer"
+          >
+            Copy Link
+          </button>
         </div>
       </aside>
     </>
