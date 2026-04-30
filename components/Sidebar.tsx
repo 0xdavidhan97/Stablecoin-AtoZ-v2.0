@@ -56,12 +56,12 @@ export default function Sidebar() {
         </p>
 
         {/* How I Built */}
-        <p className="absolute top-[341px] left-[25px] text-[12px] text-[#575757]">
+        <p className="absolute top-[341px] left-0 right-0 text-center text-[12px] text-[#575757]">
           ── How I Built ──
         </p>
 
         {/* Designed in */}
-        <div className="absolute top-[366px] left-[25px] flex items-center gap-2">
+        <div className="absolute top-[366px] left-0 right-0 flex items-center justify-center gap-2">
           <span className="text-[12px] text-[#575757]">🎨 Designed in</span>
           <Image
             src="/figma_logo.png"
@@ -73,7 +73,7 @@ export default function Sidebar() {
         </div>
 
         {/* Built with */}
-        <div className="absolute top-[405px] left-[25px] flex items-center gap-2">
+        <div className="absolute top-[405px] left-0 right-0 flex items-center justify-center gap-2">
           <span className="text-[12px] text-[#575757]">⚡ Built with</span>
           <Image
             src="/claude_logo.png"
@@ -85,17 +85,17 @@ export default function Sidebar() {
         </div>
 
         {/* Data Sources */}
-        <p className="absolute top-[478px] left-[25px] text-[12px] text-[#575757]">
+        <p className="absolute top-[478px] left-0 right-0 text-center text-[12px] text-[#575757]">
           ── Data Sources ──
         </p>
 
         {/* Interests */}
-        <p className="absolute top-[590px] left-[25px] text-[12px] text-[#575757]">
+        <p className="absolute top-[590px] left-0 right-0 text-center text-[12px] text-[#575757]">
           ── Interests ──
         </p>
 
         {/* Tags */}
-        <p className="absolute top-[624px] left-[25px] right-[16px] text-[12px] text-[#575757] leading-relaxed">
+        <p className="absolute top-[624px] left-0 right-0 text-center text-[12px] text-[#575757] leading-relaxed">
           #Blockchain #Stablecoin #x402 #Claude_Code
         </p>
 
