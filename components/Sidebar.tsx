@@ -100,20 +100,21 @@ export default function Sidebar() {
         </p>
 
         {/* Bottom fixed area — height 91px */}
-        <div className="absolute bottom-0 left-0 right-0 h-[91px] border-t border-[#F2F2F2] flex items-center px-[25px]">
-          <button
-            className="w-[191px] h-[37px] rounded-[10px] bg-white border border-[#F2F2F2] flex items-center justify-center hover:bg-gray-50 transition-colors overflow-hidden"
-            aria-label="GitHub"
-          >
-            <Image
-              src="/github_logo.png"
-              alt="GitHub"
-              width={105}
-              height={23}
-              className="object-contain"
-            />
-          </button>
-        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-[91px] border-t border-[#F2F2F2]" />
+
+        {/* GitHub logo button — top: 831px, left: 24px */}
+        <button
+          className="absolute top-[831px] left-[24px] w-[191px] h-[37px] overflow-hidden rounded-[10px] hover:opacity-80 transition-opacity"
+          aria-label="GitHub"
+        >
+          <Image
+            src="/github_logo2.png"
+            alt="GitHub"
+            width={191}
+            height={37}
+            className="object-contain"
+          />
+        </button>
       </aside>
     </>
   )
