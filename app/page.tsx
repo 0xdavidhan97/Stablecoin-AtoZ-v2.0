@@ -14,7 +14,7 @@ export default function Home() {
     <div className="min-h-screen xl:h-screen bg-white">
       <Sidebar />
 
-      <main className="xl:ml-[200px] bg-white xl:h-screen xl:flex xl:flex-col xl:overflow-hidden">
+      <main className="xl:ml-[240px] bg-white xl:h-screen xl:flex xl:flex-col xl:overflow-hidden">
         <div className="px-5 pt-14 pb-5 xl:pt-[24px] xl:flex xl:flex-col xl:flex-1 xl:min-h-0">
           <Header />
 
