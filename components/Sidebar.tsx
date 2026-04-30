@@ -56,33 +56,33 @@ export default function Sidebar() {
         </p>
 
         {/* How I Built */}
-        <p className="absolute top-[341px] left-0 right-0 text-center text-[12px] text-[#575757]">
+        <p className="absolute top-[336px] left-0 right-0 text-center text-[12px] text-[#575757]">
           ── How I Built ──
         </p>
 
-        {/* Designed in */}
-        <div className="absolute top-[366px] left-[25px] flex items-center gap-2">
-          <span className="text-[12px] text-[#575757]">🎨 Designed in</span>
-          <Image
-            src="/figma_logo.png"
-            alt="Figma"
-            width={44}
-            height={22}
-            className="object-contain"
-          />
-        </div>
+        {/* Designed in — text */}
+        <span className="absolute top-[366px] left-[25px] text-[12px] text-[#575757]">🎨 Designed in</span>
 
-        {/* Built with */}
-        <div className="absolute top-[405px] left-[25px] flex items-center gap-2">
-          <span className="text-[12px] text-[#575757]">⚡ Built with</span>
-          <Image
-            src="/claude_logo.png"
-            alt="Claude Code"
-            width={49}
-            height={22}
-            className="object-contain"
-          />
-        </div>
+        {/* Figma logo — left: 115px, top: 357px */}
+        <Image
+          src="/figma_logo2.png"
+          alt="Figma"
+          width={72.5}
+          height={34.23}
+          className="absolute top-[357px] left-[115px] object-contain"
+        />
+
+        {/* Built with — text */}
+        <span className="absolute top-[405px] left-[25px] text-[12px] text-[#575757]">⚡ Built with</span>
+
+        {/* Claude logo — left: 115px, top: 396px */}
+        <Image
+          src="/claude_logo2.png"
+          alt="Claude Code"
+          width={72.5}
+          height={34.23}
+          className="absolute top-[396px] left-[115px] object-contain"
+        />
 
         {/* Data Sources */}
         <p className="absolute top-[478px] left-0 right-0 text-center text-[12px] text-[#575757]">
