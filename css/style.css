@@ -1,0 +1,20 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+}
+
+.header {
+  padding: 24px 32px;
+  border-bottom: 1px solid #1e2330;
+}
+
+.main {
+  padding: 32px;
+}
