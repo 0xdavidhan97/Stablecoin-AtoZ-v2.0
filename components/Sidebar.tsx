@@ -99,19 +99,16 @@ export default function Sidebar() {
           #Blockchain #Stablecoin #x402 #Claude_Code
         </p>
 
-        {/* Bottom fixed area — height 91px */}
-        <div className="absolute bottom-0 left-0 right-0 h-[91px] border-t border-[#F2F2F2]" />
-
-        {/* GitHub logo button — top: 831px, left: 24px */}
+        {/* GitHub logo button — top: 830px, left: 33px */}
         <button
-          className="absolute top-[831px] left-[24px] w-[191px] h-[37px] overflow-hidden rounded-[10px] hover:opacity-80 transition-opacity"
+          className="absolute top-[830px] left-[33px] w-[174.1px] h-[39.14px] overflow-hidden hover:opacity-80 transition-opacity"
           aria-label="GitHub"
         >
           <Image
             src="/github_logo2.png"
             alt="GitHub"
-            width={191}
-            height={37}
+            width={174.1}
+            height={39.14}
             className="object-contain"
           />
         </button>
