@@ -28,6 +28,8 @@ interface ApiResponse {
   error?: string
 }
 
+const SYMBOL_ORDER = ['USDT', 'USDC', 'RLUSD']
+
 function formatBillions(value: number) {
   return `$${(value / 1e9).toFixed(0)}B`
 }
@@ -39,6 +41,7 @@ function formatDate(timestamp: number) {
 export default function MarketCapChart() {
   const [data, setData] = useState<ApiResponse | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [hidden, setHidden] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     fetch('/api/market-cap')
@@ -49,6 +52,14 @@ export default function MarketCapChart() {
       })
       .catch((e) => setError(e.message))
   }, [])
+
+  function toggleCoin(symbol: string) {
+    setHidden((prev) => {
+      const next = new Set(prev)
+      next.has(symbol) ? next.delete(symbol) : next.add(symbol)
+      return next
+    })
+  }
 
   if (error) {
     return (
@@ -68,8 +79,33 @@ export default function MarketCapChart() {
     )
   }
 
-  // Sample every 7th point to reduce render load (~52 points / year)
+  const orderedCoins = [...data.coins].sort(
+    (a, b) => SYMBOL_ORDER.indexOf(a.symbol) - SYMBOL_ORDER.indexOf(b.symbol)
+  )
+
   const sampled = data.chartData.filter((_, i) => i % 7 === 0)
+
+  const renderLegend = () => (
+    <div className="flex justify-center gap-4 mt-1">
+      {orderedCoins.map((coin) => {
+        const isHidden = hidden.has(coin.symbol)
+        return (
+          <button
+            key={coin.symbol}
+            onClick={() => toggleCoin(coin.symbol)}
+            className="flex items-center gap-1 text-[11px] transition-opacity"
+            style={{ opacity: isHidden ? 0.35 : 1 }}
+          >
+            <span
+              className="inline-block w-[20px] h-[2px] rounded"
+              style={{ backgroundColor: coin.color }}
+            />
+            {coin.symbol}
+          </button>
+        )
+      })}
+    </div>
+  )
 
   return (
     <ResponsiveContainer width="100%" height={300}>
@@ -102,8 +138,8 @@ export default function MarketCapChart() {
           }
           contentStyle={{ fontSize: 11 }}
         />
-        <Legend wrapperStyle={{ fontSize: 11 }} />
-        {data.coins.map((coin) => (
+        <Legend content={renderLegend} />
+        {orderedCoins.map((coin) => (
           <Line
             key={coin.symbol}
             type="monotone"
@@ -112,6 +148,7 @@ export default function MarketCapChart() {
             strokeWidth={1.5}
             dot={false}
             connectNulls
+            hide={hidden.has(coin.symbol)}
           />
         ))}
       </LineChart>
