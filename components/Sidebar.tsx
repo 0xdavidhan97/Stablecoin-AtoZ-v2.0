@@ -97,7 +97,7 @@ export default function Sidebar() {
         </span>
 
         {/* Claude icon */}
-        <div className="absolute top-[556px] left-[131px]">
+        <div className="absolute top-[549px] left-[131px]">
           <Image
             src="/claude_logo3.png"
             alt="Claude Code"
@@ -106,11 +106,6 @@ export default function Sidebar() {
             className="object-contain"
           />
         </div>
-
-        {/* Claude Code text */}
-        <span className="absolute top-[552px] left-[151px] text-[12px] text-[#575757]">
-          Claude Code
-        </span>
 
         {/* Line 9 */}
         <div className="absolute top-[588px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
