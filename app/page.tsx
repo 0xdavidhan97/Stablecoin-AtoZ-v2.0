@@ -1,5 +1,4 @@
 import Sidebar from '@/components/Sidebar'
-import Header from '@/components/Header'
 import ChartCard from '@/components/ChartCard'
 
 const charts = [
@@ -11,15 +10,13 @@ const charts = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen xl:h-screen bg-white">
+    <div className="min-h-screen bg-white pt-[71px]">
       <Sidebar />
 
-      <main className="xl:ml-[240px] bg-white xl:h-screen xl:flex xl:flex-col xl:overflow-hidden">
-        <div className="px-5 pt-14 pb-5 xl:pt-[24px] xl:flex xl:flex-col xl:flex-1 xl:min-h-0">
-          <Header />
-
+      <main className="xl:ml-[240px] bg-white min-h-[calc(100vh-71px)]">
+        <div className="px-5 py-6">
           {/* Intro Banner */}
-          <div className="mt-4 bg-[#FAFAFA] rounded-[6px] shrink-0" style={{ padding: '20px 24px' }}>
+          <div className="bg-[#FAFAFA] rounded-[6px]" style={{ padding: '20px 24px' }}>
             <h2 className="text-[13px] font-medium text-[#5F5F5F] tracking-[0.1em]">
               Stablecoin A to Z란?
             </h2>
@@ -31,8 +28,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Chart Grid — fills remaining height on desktop */}
-          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:flex-1 xl:min-h-0 xl:[grid-auto-rows:1fr]">
+          {/* Chart Grid */}
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-[20px]">
             {charts.map((title) => (
               <ChartCard key={title} title={title} />
             ))}

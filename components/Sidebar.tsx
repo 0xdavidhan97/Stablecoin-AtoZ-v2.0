@@ -8,9 +8,9 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile hamburger */}
+      {/* Mobile hamburger — sits in header area */}
       <button
-        className="xl:hidden fixed top-3 left-3 z-50 flex flex-col gap-[4px] p-1.5 bg-white rounded shadow-md"
+        className="xl:hidden fixed top-[22px] right-4 z-[60] flex flex-col gap-[4px] p-1.5 bg-white rounded shadow-md"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
@@ -30,80 +30,98 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside
         className={[
-          'fixed left-0 top-0 w-[240px] h-screen bg-[#FAFAFA] border-r-[1.5px] border-[#F2F2F2] overflow-hidden z-40',
+          'fixed left-0 top-[71px] w-[240px] h-[calc(100vh-71px)]',
+          'bg-[#FAFAFA] border-r-[1.5px] border-[#F2F2F2] overflow-hidden z-40',
           'transition-transform duration-300 ease-in-out',
           isOpen ? 'translate-x-0' : '-translate-x-full xl:translate-x-0',
         ].join(' ')}
       >
         {/* About Me */}
-        <p className="absolute top-[26px] left-[25px] text-[20px] font-medium text-black">
+        <p className="absolute top-[98px] left-[35px] text-[15px] font-medium text-black">
           About Me
         </p>
 
         {/* Profile image */}
-        <div className="absolute top-[66px] left-[25px] w-[190px] h-[217px] rounded-[10px] overflow-hidden">
-          <Image
-            src="/profile2.png"
-            alt="프로필"
-            fill
-            className="object-cover"
-          />
+        <div className="absolute top-[127px] left-[34px] w-[171px] h-[195px] rounded-[10px] overflow-hidden">
+          <Image src="/profile2.png" alt="프로필" fill className="object-cover" />
         </div>
 
-        {/* Seoul */}
-        <p className="absolute top-[299px] left-[25px] text-[13px] text-gray-700">
-          📍 Seoul, Republic of Korea
-        </p>
-
-        {/* How I Built */}
-        <p className="absolute top-[336px] left-0 right-0 text-center text-[12px] text-[#575757]">
-          ── How I Built ──
-        </p>
-
-        {/* Designed in — text */}
-        <span className="absolute top-[366px] left-[25px] text-[12px] text-[#575757]">🎨 Designed in</span>
-
-        {/* Figma logo — left: 115px, top: 357px */}
-        <Image
-          src="/figma_logo2.png"
-          alt="Figma"
-          width={72.5}
-          height={34.23}
-          className="absolute top-[357px] left-[115px] object-contain"
-        />
-
-        {/* Built with — text */}
-        <span className="absolute top-[405px] left-[25px] text-[12px] text-[#575757]">⚡ Built with</span>
-
-        {/* Claude logo — left: 115px, top: 396px */}
-        <Image
-          src="/claude_logo2.png"
-          alt="Claude Code"
-          width={72.5}
-          height={34.23}
-          className="absolute top-[396px] left-[115px] object-contain"
-        />
-
-        {/* Data Sources */}
-        <p className="absolute top-[478px] left-0 right-0 text-center text-[12px] text-[#575757]">
-          ── Data Sources ──
-        </p>
+        {/* Line 6 */}
+        <div className="absolute top-[341px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
 
         {/* Interests */}
-        <p className="absolute top-[590px] left-0 right-0 text-center text-[12px] text-[#575757]">
-          ── Interests ──
+        <p className="absolute top-[352px] left-[13px] text-[12px] font-medium text-[#242424]">
+          Interests
         </p>
 
         {/* Tags */}
-        <p className="absolute top-[624px] left-0 right-0 text-center text-[12px] text-[#575757] leading-relaxed">
-          #Blockchain #Stablecoin #x402 #Claude_Code
+        <p className="absolute top-[378px] left-[26px] right-[16px] text-[12px] text-[#575757] leading-relaxed">
+          #Blockchain #Stablecoin #RWA #x402 #Claude_Code
         </p>
 
-        {/* GitHub logo button — top: 830px, left: 33px */}
-        <button
-          className="absolute top-[830px] left-[33px] w-[174.1px] h-[39.14px] overflow-hidden hover:opacity-80 transition-opacity"
-          aria-label="GitHub"
-        >
+        {/* Line 7 */}
+        <div className="absolute top-[435px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+
+        {/* Data Sources */}
+        <p className="absolute top-[446px] left-[13px] text-[12px] font-medium text-[#242424]">
+          Data Sources
+        </p>
+
+        {/* Line 8 */}
+        <div className="absolute top-[553px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+
+        {/* How I Built */}
+        <p className="absolute top-[564px] left-[13px] text-[12px] font-medium text-[#242424]">
+          How I Built
+        </p>
+
+        {/* Designed in — text */}
+        <span className="absolute top-[594px] left-[40px] text-[12px] text-[#575757]">
+          🎨 Designed in
+        </span>
+
+        {/* Figma logo */}
+        <div className="absolute top-[587px] left-[128px]">
+          <Image
+            src="/figma_logo3.png"
+            alt="Figma"
+            width={61.88}
+            height={30.94}
+            className="object-contain"
+          />
+        </div>
+
+        {/* Built with — text */}
+        <span className="absolute top-[624px] left-[41px] text-[12px] text-[#575757]">
+          ⚡ Built with
+        </span>
+
+        {/* Claude icon */}
+        <div className="absolute top-[627px] left-[131px]">
+          <Image
+            src="/claude_logo3.png"
+            alt="Claude Code"
+            width={15.85}
+            height={15.85}
+            className="object-contain"
+          />
+        </div>
+
+        {/* Claude Code text */}
+        <span className="absolute top-[623px] left-[151px] text-[12px] text-[#575757]">
+          Claude Code
+        </span>
+
+        {/* Line 9 */}
+        <div className="absolute top-[659px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+
+        {/* Seoul */}
+        <p className="absolute top-[738px] left-[19px] text-[13px] text-black">
+          📍 Seoul, Republic of Korea
+        </p>
+
+        {/* GitHub logo — fixed at sidebar bottom */}
+        <div className="absolute bottom-6 left-[33px]">
           <Image
             src="/github_logo2.png"
             alt="GitHub"
@@ -111,7 +129,7 @@ export default function Sidebar() {
             height={39.14}
             className="object-contain"
           />
-        </button>
+        </div>
       </aside>
     </>
   )
