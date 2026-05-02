@@ -47,7 +47,7 @@ export default function Sidebar() {
         </div>
 
         {/* Line 6 */}
-        <div className="absolute top-[341px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+        <div className="absolute top-[341px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
 
         {/* Interests */}
         <p className="absolute top-[352px] left-[13px] text-[12px] font-medium text-[#242424]">
