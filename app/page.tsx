@@ -1,5 +1,6 @@
 import Sidebar from '@/components/Sidebar'
 import TopBanner from '@/components/TopBanner'
+import MarketCapChart from '@/components/MarketCapChart'
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
               Stablecoin Market Cap
             </p>
             <div className="absolute top-[42px] left-0 w-full h-0 border-t border-[#F2F2F2]" />
+            <div className="absolute top-[50px] left-0 right-0 bottom-0">
+              <MarketCapChart />
+            </div>
           </div>
         </div>
       </main>
