@@ -37,51 +37,51 @@ export default function Sidebar() {
         ].join(' ')}
       >
         {/* About Me */}
-        <p className="absolute top-[98px] left-[35px] text-[15px] font-medium text-black">
+        <p className="absolute top-[27px] left-[35px] text-[15px] font-medium text-black">
           About Me
         </p>
 
         {/* Profile image */}
-        <div className="absolute top-[127px] left-[34px] w-[171px] h-[195px] rounded-[10px] overflow-hidden">
+        <div className="absolute top-[56px] left-[34px] w-[171px] h-[195px] rounded-[10px] overflow-hidden">
           <Image src="/profile2.png" alt="프로필" fill className="object-cover" />
         </div>
 
         {/* Line 6 */}
-        <div className="absolute top-[341px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
+        <div className="absolute top-[270px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
 
         {/* Interests */}
-        <p className="absolute top-[352px] left-[13px] text-[12px] font-medium text-[#242424]">
+        <p className="absolute top-[281px] left-[13px] text-[12px] font-medium text-[#242424]">
           Interests
         </p>
 
         {/* Tags */}
-        <p className="absolute top-[378px] left-[26px] right-[16px] text-[12px] text-[#575757] leading-relaxed">
+        <p className="absolute top-[307px] left-[26px] right-[16px] text-[12px] text-[#575757] leading-relaxed">
           #Blockchain #Stablecoin #RWA #x402 #Claude_Code
         </p>
 
         {/* Line 7 */}
-        <div className="absolute top-[435px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+        <div className="absolute top-[364px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
 
         {/* Data Sources */}
-        <p className="absolute top-[446px] left-[13px] text-[12px] font-medium text-[#242424]">
+        <p className="absolute top-[375px] left-[13px] text-[12px] font-medium text-[#242424]">
           Data Sources
         </p>
 
         {/* Line 8 */}
-        <div className="absolute top-[553px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+        <div className="absolute top-[482px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
 
         {/* How I Built */}
-        <p className="absolute top-[564px] left-[13px] text-[12px] font-medium text-[#242424]">
+        <p className="absolute top-[493px] left-[13px] text-[12px] font-medium text-[#242424]">
           How I Built
         </p>
 
         {/* Designed in — text */}
-        <span className="absolute top-[594px] left-[40px] text-[12px] text-[#575757]">
+        <span className="absolute top-[523px] left-[40px] text-[12px] text-[#575757]">
           🎨 Designed in
         </span>
 
         {/* Figma logo */}
-        <div className="absolute top-[587px] left-[128px]">
+        <div className="absolute top-[516px] left-[128px]">
           <Image
             src="/figma_logo3.png"
             alt="Figma"
@@ -92,12 +92,12 @@ export default function Sidebar() {
         </div>
 
         {/* Built with — text */}
-        <span className="absolute top-[624px] left-[41px] text-[12px] text-[#575757]">
+        <span className="absolute top-[553px] left-[41px] text-[12px] text-[#575757]">
           ⚡ Built with
         </span>
 
         {/* Claude icon */}
-        <div className="absolute top-[627px] left-[131px]">
+        <div className="absolute top-[556px] left-[131px]">
           <Image
             src="/claude_logo3.png"
             alt="Claude Code"
@@ -108,19 +108,19 @@ export default function Sidebar() {
         </div>
 
         {/* Claude Code text */}
-        <span className="absolute top-[623px] left-[151px] text-[12px] text-[#575757]">
+        <span className="absolute top-[552px] left-[151px] text-[12px] text-[#575757]">
           Claude Code
         </span>
 
         {/* Line 9 */}
-        <div className="absolute top-[659px] left-0 right-0 h-0 border-t-[1.5px] border-[#F2F2F2]" />
+        <div className="absolute top-[588px] left-0 w-[240px] h-0 border-t-[1.5px] border-[#F2F2F2]" />
 
         {/* Seoul */}
-        <p className="absolute top-[738px] left-[19px] text-[13px] text-black">
+        <p className="absolute top-[667px] left-[19px] text-[13px] text-black">
           📍 Seoul, Republic of Korea
         </p>
 
-        {/* GitHub logo — fixed at sidebar bottom */}
+        {/* GitHub logo — fixed at sidebar bottom (unchanged) */}
         <div className="absolute bottom-6 left-[33px]">
           <Image
             src="/github_logo2.png"
