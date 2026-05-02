@@ -15,7 +15,7 @@ export default function Header() {
           className="absolute top-[20px] left-[19px]"
         />
         <p
-          className={`absolute top-[48px] left-[57px] text-[20px] text-black leading-none ${konkhmer.className}`}
+          className={`absolute top-[18px] left-[57px] text-[20px] text-black leading-none ${konkhmer.className}`}
         >
           Stablecoin A to Z
         </p>
