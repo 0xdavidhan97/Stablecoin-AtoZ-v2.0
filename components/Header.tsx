@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 h-[71px] bg-white border-b-[1.5px] border-[#F2F2F2] z-50">
+    <header className="fixed top-0 left-0 w-full h-[71px] bg-white border-b-[1.5px] border-[#F2F2F2] z-50">
       <div className="relative w-full h-full">
         {/* 로고 이미지 */}
         <div className="absolute top-[20px] left-[19px] w-[29px] h-[29px]">
