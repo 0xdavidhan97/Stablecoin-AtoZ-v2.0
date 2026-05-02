@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { Konkhmer_Sleokchher } from 'next/font/google'
+
+const konkhmer = Konkhmer_Sleokchher({ subsets: ['latin'], weight: '400' })
 
 export default function Header() {
   return (
@@ -14,16 +17,12 @@ export default function Header() {
           />
         </div>
 
-        {/* 타이틀 이미지 */}
-        <div className="absolute top-[20px] left-[57px]">
-          <Image
-            src="/Stablecoin_A_to_Z.png"
-            alt="Stablecoin A to Z"
-            width={165}
-            height={16}
-            className="object-contain"
-          />
-        </div>
+        {/* 타이틀 텍스트 */}
+        <p
+          className={`absolute top-[17px] left-[64px] w-[167px] h-[36px] text-[20px] font-normal leading-[36px] text-black ${konkhmer.className}`}
+        >
+          Stablecoin A to Z
+        </p>
       </div>
     </header>
   )
