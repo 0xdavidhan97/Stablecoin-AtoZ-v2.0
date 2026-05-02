@@ -5,8 +5,7 @@ export const revalidate = 3600
 const COINS = [
   { id: 'tether', symbol: 'USDT', color: '#26A17B' },
   { id: 'usd-coin', symbol: 'USDC', color: '#2775CA' },
-  { id: 'dai', symbol: 'DAI', color: '#F5AC37' },
-  { id: 'binance-usd', symbol: 'BUSD', color: '#F0B90B' },
+  { id: 'ripple-usd', symbol: 'RLUSD', color: '#346AA9' },
 ]
 
 function delay(ms: number) {
