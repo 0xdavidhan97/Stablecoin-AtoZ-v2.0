@@ -1,6 +1,6 @@
 export default function TopBanner() {
   return (
-    <div className="relative mt-[8px] mx-[8px] h-[88px] bg-[#FAFAFA] rounded-[5px]">
+    <div className="relative mt-[8px] ml-[273px] mr-[33px] h-[88px] bg-[#FAFAFA] rounded-[5px]">
       <span className="absolute top-[10px] left-[17px] w-[158px] h-[15px] text-[13px] font-bold leading-[16px] tracking-[0.1em] text-[#5F5F5F]">
         Stablecoin A to Z란?
       </span>
