@@ -30,7 +30,7 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside
         className={[
-          'fixed left-0 top-[71px] w-[240px] h-[calc(100vh-71px)]',
+          'fixed left-0 top-[71px] w-[240px] h-[calc(100vh-71px)] box-border',
           'bg-[#FAFAFA] border-r-[1.5px] border-[#F2F2F2] overflow-hidden z-40',
           'transition-transform duration-300 ease-in-out',
           isOpen ? 'translate-x-0' : '-translate-x-full xl:translate-x-0',
