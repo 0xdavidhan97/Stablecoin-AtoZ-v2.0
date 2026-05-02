@@ -101,8 +101,8 @@ export default function Sidebar() {
           <Image
             src="/claude_logo3.png"
             alt="Claude Code"
-            width={15.85}
-            height={15.85}
+            width={65}
+            height={24}
             className="object-contain"
           />
         </div>
