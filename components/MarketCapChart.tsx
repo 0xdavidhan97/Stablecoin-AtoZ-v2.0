@@ -85,6 +85,15 @@ export default function MarketCapChart() {
 
   const sampled = data.chartData.filter((_, i) => i % 7 === 0)
 
+  const visibleSymbols = orderedCoins.filter((c) => !hidden.has(c.symbol)).map((c) => c.symbol)
+  const allValues = sampled.flatMap((point) =>
+    visibleSymbols.map((s) => point[s]).filter((v): v is number => v != null)
+  )
+  const dataMin = allValues.length ? Math.min(...allValues) : 0
+  const dataMax = allValues.length ? Math.max(...allValues) : 1
+  const pad = (dataMax - dataMin) * 0.1
+  const yDomain: [number, number] = [Math.max(0, dataMin - pad), dataMax + pad]
+
   const renderLegend = () => (
     <div className="flex justify-center gap-4 mt-1">
       {orderedCoins.map((coin) => {
@@ -124,6 +133,7 @@ export default function MarketCapChart() {
           tickLine={false}
           axisLine={false}
           width={52}
+          domain={yDomain}
         />
         <Tooltip
           formatter={(value: unknown) =>
